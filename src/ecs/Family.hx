@@ -97,6 +97,11 @@ class Family
     {
         return new FamilyIterator(entities, isActive());
     }
+
+    public function size()
+    {
+        return entities.size();
+    }
 }
 
 private class FamilyIterator

@@ -70,6 +70,7 @@ macro function destroyEntity(_universe : ExprOf<Universe>, _entity : ExprOf<Enti
         final _ecsTmpEntity = $e{ _entity };
         $e{ _universe }.components.clear(_ecsTmpEntity);
         $e{ _universe }.families.whenEntityDestroyed(_ecsTmpEntity);
+	   $e{ _universe }.entities.destroy($e{ _entity }.id());
     }
 }
 
